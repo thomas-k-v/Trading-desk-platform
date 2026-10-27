@@ -1,0 +1,31 @@
+// Event taxonomy. Mirrors docs/09-analytics-tracking-plan.md — keep them in sync.
+export const EVENTS = {
+  app_opened: 'Session start',
+  watchlist_viewed: 'Watchlist tab shown',
+  watchlist_symbol_added: 'Instrument added to a watchlist',
+  watchlist_symbol_removed: 'Instrument removed from a watchlist',
+  search_performed: 'Instrument search query submitted',
+  chart_opened: 'Chart opened for a symbol',
+  order_pad_opened: 'Order pad opened (entry point in `source`)',
+  pretrade_check_failed: 'Smart pad showed a blocking check',
+  pretrade_fix_applied: 'User tapped a one-tap fix',
+  order_review_shown: 'Confirm sheet shown',
+  order_placed: 'Order accepted by RMS',
+  order_rejected: 'Order rejected by RMS',
+  order_executed: 'Order fully executed',
+  order_modified: 'Open order modified',
+  order_cancelled: 'Open order cancelled',
+  position_squared_off: 'Position exited from Positions screen',
+  funds_added: 'Funds added',
+  funds_withdrawn: 'Withdrawal requested',
+  report_exported: 'Report downloaded as CSV',
+  option_chain_viewed: 'Option chain opened',
+  mf_sip_started: 'SIP created',
+  mf_lumpsum_invested: 'Lumpsum purchase',
+  alert_created: 'Price alert created',
+  alert_triggered: 'Price alert fired',
+  alert_cta_clicked: 'Quick reply tapped on alert notification',
+  experiment_variant_changed: 'Order pad variant switched in settings',
+} as const;
+
+export type EventName = keyof typeof EVENTS;

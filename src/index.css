@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.tabular-nums { font-variant-numeric: tabular-nums; }
+@keyframes flash-up { from { background: rgba(22,163,74,.18); } to { background: transparent; } }
+@keyframes flash-down { from { background: rgba(220,38,38,.18); } to { background: transparent; } }
+.flash-up { animation: flash-up .8s ease-out; }
+.flash-down { animation: flash-down .8s ease-out; }
+@keyframes slide-in { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+.slide-in { animation: slide-in .2s ease-out; }
